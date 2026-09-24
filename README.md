@@ -1,4 +1,4 @@
-i# DevOps Learning & Linux PROJECT
+##  DevOps Learning & Linux Projects
 
 This repository contains my hands-on practice while learning Linux, Bash scripting, Git, GitHub, AWS, and DevOps fundamentals.
 
