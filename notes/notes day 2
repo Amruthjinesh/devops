@@ -1,4 +1,4 @@
-# Day 2 - Jenkins + Docker pipeline
+## Day 2 - Jenkins + Docker pipeline
 
 - Jenkins job `docker-app-pipeline` builds and deploys my docker-app repo
 - Stages: Clone, Build Docker Image, Stop Old Container, Run New Container, Health Check
