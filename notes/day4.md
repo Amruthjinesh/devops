@@ -44,5 +44,15 @@
 
 \## Hands-on
 
-(add after setting up the EC2 node)
+\- Two EC2 instances: one controller (Jenkins), one agent (Java).
+
+\- Node name: deploy, label: deployagent, connected over SSH.
+
+\- Test job node-test (Freestyle, restricted to label deployagent) ran `hostname`.
+
+\- Console output: "Building remotely on deploy (deployagent)".
+
+\- Mistake: typed `ubuntu` in the shell step, not `hostname`. Error: "ubuntu: not found".
+
+\- Lesson: the Execute shell step runs real commands, so every word is a command.
 
