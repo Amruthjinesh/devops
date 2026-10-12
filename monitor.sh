@@ -1,4 +1,5 @@
 #!/bin/bash
+# Ubuntu WSL version - runs from /usr/local/bin
 
 echo "=============================="
 echo "     LINUX SYSTEM MONITOR"
