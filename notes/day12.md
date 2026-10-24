@@ -34,3 +34,9 @@ Test (`py_compile`) → Build image → Save previous image → Stop old contain
 ## Habits
 - Stop servers when done (stop, not terminate)
 - Paste only the command, not the whole terminal. A stray `EOF` line ended up inside my `index.html` and I fixed it with `sed -i`.
+
+
+## Quiz misses
+- RUN happens at build time (saved in the image). CMD happens at docker run.
+- The RUN line is a build-time line, even though the name says "run".
+- 127.0.0.1 inside a container means only the container itself. Use 0.0.0.0 so the port map works from outside.
