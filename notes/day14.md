@@ -18,3 +18,9 @@
 
 - Quiz miss: RUN vs CMD (missed again, now tested myself).
 
+
+## Exit codes
+- A container stops when its main command ends.
+- Exit 0 = finished with no error.
+- Exit 137 = killed from outside (docker stop, docker kill, shutdown, out of memory).
+- An echo container stops fast. A web app keeps running because it keeps waiting for requests.
