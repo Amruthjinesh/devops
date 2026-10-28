@@ -40,7 +40,7 @@ Automate the process of pushing my DevOps notes to GitHub and copying missing no
 
 
 
-```powershell
+````powershell
 
 cd "C:\\Users\\Amruth\\linux-system-monitor\\notes"
 
@@ -52,7 +52,7 @@ cd "C:\\Users\\Amruth\\linux-system-monitor\\notes"
 
 
 
-```powershell
+````powershell
 
 notepad day16.md
 
@@ -64,7 +64,7 @@ notepad day16.md
 
 
 
-```powershell
+````powershell
 
 git -C "C:\\Users\\Amruth\\linux-system-monitor" status
 
@@ -84,7 +84,7 @@ Example:
 
 
 
-```powershell
+````powershell
 
 $env:USERPROFILE
 
@@ -154,7 +154,7 @@ The commit command is:
 
 
 
-```powershell
+````powershell
 
 git -C $RepoRoot commit -m "Update DevOps notes" -- notes
 
@@ -178,7 +178,7 @@ I allowed execution for the current PowerShell session using:
 
 
 
-```powershell
+````powershell
 
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
@@ -190,7 +190,7 @@ Verified the current setting using:
 
 
 
-```powershell
+````powershell
 
 Get-ExecutionPolicy -Scope Process
 
@@ -238,7 +238,7 @@ Checked the Git repository:
 
 
 
-```powershell
+````powershell
 
 git -C "C:\\Users\\Amruth\\linux-system-monitor" status
 
@@ -272,7 +272,7 @@ Executed the script using:
 
 
 
-```powershell
+````powershell
 
 \& "C:\\Users\\Amruth\\Scripts\\Sync-Notes-To-Obsidian.ps1"
 
@@ -352,7 +352,7 @@ The script reports conflicts instead of overwriting existing Obsidian files with
 
 
 
-```powershell
+````powershell
 
 cd "C:\\Users\\Amruth\\linux-system-monitor\\notes"
 
@@ -364,7 +364,7 @@ cd "C:\\Users\\Amruth\\linux-system-monitor\\notes"
 
 
 
-```powershell
+````powershell
 
 notepad day17.md
 
@@ -380,7 +380,7 @@ Save the note using `Ctrl + S`.
 
 
 
-```powershell
+````powershell
 
 \& "C:\\Users\\Amruth\\Scripts\\Sync-Notes-To-Obsidian.ps1"
 
@@ -494,5 +494,21 @@ I created and tested a PowerShell script that pushes my existing DevOps notes to
 
 
 
+
+
+
+## 12. Creating a Shortcut for the Automation
+
+To avoid typing the full script path, I created a PowerShell function called `syncnotes`.
+
+### Create the shortcut
+```powershell
+function syncnotes { & "C:\Users\Amruth\Scripts\Sync-Notes-To-Obsidian.ps1" }
+```
+### Run the automation
+```powershell
+syncnotes
+```
+**Important:** This shortcut works only in the current PowerShell session.
 
 
